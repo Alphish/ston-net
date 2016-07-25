@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>ec4bfa8e-058e-442d-a60d-f4f184273c5b</ProjectGuid>
+    <ProjectGuid>{EC4BFA8E-058E-442D-A60D-F4F184273C5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Alphicsh.Ston</RootNamespace>
@@ -28,27 +28,70 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Alphicsh.Ston.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Building\CoreStonDocumentFactory.cs" />
+    <Compile Include="Building\CoreStonElementFactory.cs" />
+    <Compile Include="Building\IStonDocumentFactory.cs" />
+    <Compile Include="Equivalence\IStonBindingKeyEquivalenceComparer.cs" />
+    <Compile Include="Equivalence\IStonEntityEquivalenceComparer.cs" />
+    <Compile Include="Equivalence\IStonTypeEquivalenceComparer.cs" />
+    <Compile Include="Equivalence\StonBindingKeyEquivalenceComparer.cs" />
+    <Compile Include="Equivalence\StonSemanticEntityEquivalenceComparer.cs" />
+    <Compile Include="Equivalence\StonTypeEquivalenceComparer.cs" />
+    <Compile Include="Helpers\NumericStringCalculator.cs" />
+    <Compile Include="Helpers\Validator.cs" />
+    <Compile Include="IStonAddress.cs" />
+    <Compile Include="IStonBindingKey.cs" />
+    <Compile Include="IStonCollectionInit.cs" />
+    <Compile Include="IStonConstruction.cs" />
+    <Compile Include="IStonDocument.cs" />
+    <Compile Include="IStonDocument_Extensions.cs" />
+    <Compile Include="IStonEntity.cs" />
+    <Compile Include="IStonEntity_Extensions.cs" />
+    <Compile Include="IStonInitialContext.cs" />
+    <Compile Include="IStonMemberInit.cs" />
+    <Compile Include="IStonPathSegment.cs" />
+    <Compile Include="IStonReader.cs" />
+    <Compile Include="IStonReader_Extensions.cs" />
+    <Compile Include="IStonSimpleValue.cs" />
+    <Compile Include="IStonType.cs" />
+    <Compile Include="IStonWriter.cs" />
+    <Compile Include="StonBindingKey.cs" />
+    <Compile Include="StonConstruction.cs" />
+    <Compile Include="Building\IStonElementFactory.cs" />
+    <Compile Include="StonException.cs" />
+    <Compile Include="StonFormat.cs" />
+    <Compile Include="StonInitialContext.cs" />
+    <Compile Include="StonMemberInit.cs" />
+    <Compile Include="StonPathSegment.cs" />
+    <Compile Include="StonSimpleValue.cs" />
+    <Compile Include="Tokenization\StonChartype.cs" />
+    <Compile Include="StonDataType.cs" />
+    <Compile Include="StonAddress.cs" />
+    <Compile Include="Tokenization\StonChartable.cs" />
+    <Compile Include="StonDocument.cs" />
+    <Compile Include="StonEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StonCollectionInit.cs" />
+    <Compile Include="RegularStonReader.cs" />
+    <Compile Include="StonType.cs" />
+    <Compile Include="CanonicalStonWriter.cs" />
+    <Compile Include="Tokenization\StonTokenReader.cs" />
+    <Compile Include="Tokenization\StonTokenWriter.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -57,5 +100,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
